@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>589</width>
-    <height>486</height>
+    <width>595</width>
+    <height>492</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,7 +38,7 @@
    <widget class="QPushButton" name="Predict">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>20</x>
       <y>300</y>
       <width>261</width>
       <height>31</height>
@@ -78,7 +78,7 @@
      <string>Load</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="Bujae">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -99,7 +99,7 @@
      <string>부재리스트</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="Gujo">
     <property name="geometry">
      <rect>
       <x>390</x>
@@ -169,10 +169,10 @@
    <widget class="QPushButton" name="Tin">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>300</y>
+      <x>19</x>
+      <y>340</y>
       <width>261</width>
-      <height>161</height>
+      <height>121</height>
      </rect>
     </property>
     <property name="font">
@@ -186,10 +186,6 @@
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>T_in_Robotics.png</normaloff>T_in_Robotics.png</iconset>
-    </property>
     <property name="iconSize">
      <size>
       <width>261</width>
@@ -201,6 +197,82 @@
     <property name="geometry">
      <rect>
       <x>310</x>
+      <y>380</y>
+      <width>261</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Launch_PLC">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>300</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Transport Data to PLC</string>
+    </property>
+    <property name="autoRepeatDelay">
+     <number>300</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="PN">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>340</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Port Number</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="PortNumber">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>340</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Tin_Logo">
+    <property name="geometry">
+     <rect>
+      <x>19</x>
       <y>340</y>
       <width>261</width>
       <height>121</height>
@@ -218,9 +290,25 @@
      <string/>
     </property>
    </widget>
+   <zorder>Load1</zorder>
+   <zorder>Predict</zorder>
+   <zorder>Load2</zorder>
+   <zorder>Bujae</zorder>
+   <zorder>Gujo</zorder>
+   <zorder>graphicsView1</zorder>
+   <zorder>Display1</zorder>
+   <zorder>graphicsView2</zorder>
+   <zorder>Display2</zorder>
+   <zorder>CAILAB</zorder>
+   <zorder>Launch_PLC</zorder>
+   <zorder>PN</zorder>
+   <zorder>PortNumber</zorder>
+   <zorder>Tin</zorder>
+   <zorder>Tin_Logo</zorder>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>

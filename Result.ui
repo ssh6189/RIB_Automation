@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
+     <y>80</y>
      <width>51</width>
      <height>551</height>
     </rect>
@@ -36,7 +36,7 @@
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>10</y>
+     <y>80</y>
      <width>241</width>
      <height>551</height>
     </rect>
@@ -55,7 +55,7 @@
    <property name="geometry">
     <rect>
      <x>320</x>
-     <y>10</y>
+     <y>80</y>
      <width>381</width>
      <height>551</height>
     </rect>
@@ -70,23 +70,56 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="Result_DB3_2">
+  <widget class="QPushButton" name="Save">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>0</y>
-     <width>381</width>
-     <height>551</height>
+     <x>20</x>
+     <y>10</y>
+     <width>75</width>
+     <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>Save</string>
    </property>
-   <property name="alignment">
-    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>56</width>
+     <height>12</height>
+    </rect>
    </property>
-   <property name="wordWrap">
-    <bool>false</bool>
+   <property name="text">
+    <string>늑근부호</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>50</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>늑근 선로길이</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>50</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>늑근 개수 / 늑근 사이즈</string>
    </property>
   </widget>
  </widget>
