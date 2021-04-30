@@ -172,16 +172,26 @@ def clustering(prerocess_img, origin_img, img_name, save_path, show_graph):
     K_point = model.fit_predict(data)
     print("K_point")
     print(K_point)
-
+    kluster_point = K_point.tolist()
+    cluster1 = kluster_point.count(0)
+    cluster2 = kluster_point.count(1)
+    cell = 0
+    not_cell = 0
+    if cluster1 > cluster2:
+        cell=0
+        not_cell = 1
+    else :
+        cell = 1
+        not_cell = 0
     c0, c1 = model.cluster_centers_
     print("cluster_centers")
     print(c0, c1)
 
     for i in range(len(data)):
-        if K_point[i] == 0:
+        if K_point[i] == cell:
             plt.scatter(data[i][0], data[i][1], marker='v', facecolor='r', edgecolors='k')
 
-        elif K_point[i] == 1:
+        elif K_point[i] == not_cell:
             plt.scatter(data[i][0], data[i][1], marker='o', facecolor='b', edgecolors='k')
 
     if show_graph == True :
@@ -199,21 +209,21 @@ def clustering(prerocess_img, origin_img, img_name, save_path, show_graph):
     for i in range(len(canny_contours)):
         x, y, w, h = cv2.boundingRect(canny_contours[i])
 
-        if x<4400 and K_point[i] == 0:
+        if x<4400 and K_point[i] == cell:
             cv2.rectangle(canny_bounding_result, (x, y), (x+w, y+h), (0, 0 ,255), 1)
 
-        elif x<4400 and K_point[i] == 1:
+        elif x<4400 and K_point[i] == not_cell:
             cv2.rectangle(canny_bounding_result, (x, y), (x+w, y+h), (255,0, 0), 1)
 
     for i in range(len(canny_contours)):
         tmp = input_1.copy()
         x, y, w, h = cv2.boundingRect(canny_contours[i])
 
-        if x<4400 and K_point[i] == 1:
+        if x<4400 and K_point[i] == not_cell:
             t_in = 10
             # print("loading...")
             
-        elif x<4400 and K_point[i] == 0 and w>100 and h>50:
+        elif x<4400 and K_point[i] == cell and w>100 and h>50:
             # print("loading...")
             cv2.rectangle(canny_bounding_result2, (x, y), (x+w, y+h), (0, 0, 255), 3)
 
